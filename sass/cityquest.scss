@@ -1,4 +1,9 @@
 
+body {
+}
+
+
+
 ul.nav.navbar-nav {
 	li {
 		margin-left: 19px;
@@ -35,18 +40,69 @@ ul.nav.navbar-nav {
 		border: 1px solid #76838c;
 		font-weight: 300;
 		font-size: 13px;
+		padding: 6px 12px 3px;
 		&:hover {
-			color: rgba(255,255,255, 1);
+			color: #fff;
 			border: 1px solid #1f2930;
 			box-shadow: 0 0 10px rgba(255,255,255,0.5);
 		}
 	}
-	.btn-group:hover {
-		box-shadow: 0 0 10px rgba(255,255,255,0.5);
-		.btn {
-			color: rgba(255,255,255, 1);
-			border: 1px solid #1f2930;
-			box-shadow: none;
-		}	
+	.btn-group {
+		margin-right: 22px;
+		&:hover {
+			box-shadow: 0 0 10px rgba(255,255,255,0.5);
+			.btn {
+				color: rgba(255,255,255, 1);
+				border: 1px solid #1f2930;
+				box-shadow: none;
+			}	
+		}
+		.dropdown-menu {
+			background-color: transparent;
+			a {
+				color: rgba(255,255,255, 0.7);
+				&:hover {
+					color: #fff;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+}
+
+.jumbotron  {
+	background-image: url(../img/Photos/BG_Dark_5.jpg);
+	background-size: cover;
+	h1 {
+		font-family: "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+		font-weight: normal;
+		font-size: 56px;
+		color:#fff;
+		&:after {
+			content:' ';
+			border-top:1px solid #a7b2b9;
+			display: block;
+			margin: 19px auto 30px;
+			width: 64px;
+		}
+	}
+	p {
+		color: rgba(255,255,255, 0.7);
+		font-size: 28px;
+		font-family: "Circe", "Helvetica Neue", Helvetica, sans-serif;
+		font-weight: 300;
+		&:after {
+			content:' ';
+			border-top:1px solid #a7b2b9;
+			display: block;
+			margin: 14px auto 25px;
+			width: 32px;
+		}
+	}
+	small {
+		font-size: 16px;
+		font-family: "Circe", "Helvetica Neue", Helvetica, sans-serif;
+		font-weight: 300;
+		color: rgba(255,255,255, 0.4);		
 	}
 }

@@ -33,11 +33,15 @@ ul.nav.navbar-nav li.active a, ul.nav.navbar-nav li:hover a {
   border: 1px solid #76838c;
   font-weight: 300;
   font-size: 13px;
+  padding: 6px 12px 3px;
 }
 .right-nav-btn .btn:hover {
-  color: white;
+  color: #fff;
   border: 1px solid #1f2930;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.right-nav-btn .btn-group {
+  margin-right: 22px;
 }
 .right-nav-btn .btn-group:hover {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -46,4 +50,51 @@ ul.nav.navbar-nav li.active a, ul.nav.navbar-nav li:hover a {
   color: white;
   border: 1px solid #1f2930;
   box-shadow: none;
+}
+.right-nav-btn .btn-group .dropdown-menu {
+  background-color: transparent;
+}
+.right-nav-btn .btn-group .dropdown-menu a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.right-nav-btn .btn-group .dropdown-menu a:hover {
+  color: #fff;
+  background-color: transparent;
+}
+
+.jumbotron {
+  background-image: url(../img/Photos/BG_Dark_5.jpg);
+  background-size: cover;
+}
+.jumbotron h1 {
+  font-family: "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 56px;
+  color: #fff;
+}
+.jumbotron h1:after {
+  content: ' ';
+  border-top: 1px solid #a7b2b9;
+  display: block;
+  margin: 19px auto 30px;
+  width: 64px;
+}
+.jumbotron p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 28px;
+  font-family: "Circe", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 300;
+}
+.jumbotron p:after {
+  content: ' ';
+  border-top: 1px solid #a7b2b9;
+  display: block;
+  margin: 14px auto 25px;
+  width: 32px;
+}
+.jumbotron small {
+  font-size: 16px;
+  font-family: "Circe", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
 }
