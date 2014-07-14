@@ -28,11 +28,17 @@
 ul.nav.navbar-nav {
 	li {
 		margin:0 19px;
-		border-top: 5px solid rgba(0,0,0,0);
+		@media (min-width: $screen-lg) {
+			border-top: 5px solid rgba(0,0,0,0);
+
+		}
 		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 			margin:0 12px;
 		}
 		a {
+			@media (max-width: $screen-md-max) {
+				text-align: center;
+			}
 			font-size: 13px;
 			font-weight: normal;
 			text-transform: uppercase;
@@ -46,12 +52,19 @@ ul.nav.navbar-nav {
 			}
 		}
 		&.active, &:hover {
-			border-top: 5px solid #59656f;
+
+			@media (min-width: $screen-lg) {
+				border-top: 5px solid #59656f;
+			}
 			a {
 				opacity: 1;
 			}
 		}
 	}
+}
+
+#close_top_menu {
+	cursor: pointer;
 }
 
 .btn-topline {
@@ -210,6 +223,10 @@ ul.nav.navbar-nav {
 	background-size: cover;
 	padding-top: 46px;
 	padding-bottom: 40px;
+	@media (max-width: $screen-xs-max) {
+		padding-top: 26px;
+		padding-bottom: 20px;
+	}
 	.row {
 		@media (min-width: 1650px) {
 			width: 1650px;

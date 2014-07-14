@@ -33,4 +33,23 @@ $(function() {
 	window.addEventListener(orientationEvent, function() {
 		set_video_bgr();
 	});
+
+
+	$('#top_menu').on('show.bs.collapse', function(){
+		$('body').append('<div class="modal-backdrop fade in"></div>');
+		$(this).css({
+			'position': 'absolute',
+			'width': document.body.clientWidth,
+			'height': $(window).height(),
+			'overflow-y':'scroll',
+			'z-index': 1041,
+			'top': 0,
+			'left': 0,
+		}).appendTo('body');
+	});
+
+	$('#close_top_menu').click(function(){
+		$('#top_menu').appendTo('#top_menu_container');
+		$('.modal-backdrop.fade.in').fadeOut();
+	});
 });
