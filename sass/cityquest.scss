@@ -14,8 +14,8 @@
 	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 		margin-top: 14px;
 	}
-	@media (max-width: $screen-xs-max) {
-		margin-top: 5px;	
+	@media (max-width: 480px) {
+		margin-top: 5px;
 		img {	
 			display: block;
 			max-width: 100%;
@@ -134,7 +134,19 @@ ul.nav.navbar-nav {
 	}
 }
 
-.jumbotron  {
+#bgr_video, #bgr_video_footer {
+	position: absolute;
+	left: 0;
+	display: none;
+}
+#bgr_video {
+	top:0;
+}
+#bgr_video_footer {
+	bottom: 0;
+}
+
+.jumbotron {
 	background-image: url(../img/Photos/BG_Dark_5.jpg);
 	background-size: cover;
 	h1 {
