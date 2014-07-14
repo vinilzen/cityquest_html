@@ -147,16 +147,13 @@ ul.nav.navbar-nav {
 	}
 }
 
-#bgr_video, #bgr_video_footer {
-	position: absolute;
-	left: 0;
-	display: none;
-}
 #bgr_video {
+	position: absolute;
+	display: none;
+	left: 0;
 	top:0;
-}
-#bgr_video_footer {
-	bottom: 0;
+	background-image: url(../img/Photos/BG_Dark_5.jpg);
+	background-size: cover;
 }
 
 .jumbotron {
