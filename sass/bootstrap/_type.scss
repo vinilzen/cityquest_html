@@ -285,6 +285,7 @@ address {
 
 
 // Import the fonts
+/* 
 @font-face {
   $icon-font-name: 'circe';
   font-family: 'Circe';
@@ -294,6 +295,17 @@ address {
        url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.otf'), '#{$icon-font-path}#{$icon-font-name}.otf')) format('opentype'),
        url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}'), '#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}')) format('svg');
 }
+ */
+
+@font-face {
+  font-family: 'Circe-Regular';
+  src: url('fonts/Circe-Regular.eot?') format('eot'), 
+       url('fonts/Circe-Regular.otf')  format('opentype'),
+       url('fonts/Circe-Regular.woff') format('woff'), 
+       url('fonts/Circe-Regular.ttf')  format('truetype'),
+       url('fonts/Circe-Regular.svg#Circe-Regular') format('svg');
+}
+
 // Import the fonts
 @font-face {
   $icon-font-name: 'circelight';

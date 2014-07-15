@@ -28,9 +28,8 @@
 ul.nav.navbar-nav {
 	li {
 		margin:0 19px;
-		@media (min-width: $screen-lg) {
+		@media (min-width: $screen-md) {
 			border-top: 5px solid rgba(0,0,0,0);
-
 		}
 		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 			margin:0 12px;
@@ -52,8 +51,7 @@ ul.nav.navbar-nav {
 			}
 		}
 		&.active, &:hover {
-
-			@media (min-width: $screen-lg) {
+			@media (min-width: $screen-md) {
 				border-top: 5px solid #59656f;
 			}
 			a {
@@ -105,9 +103,7 @@ ul.nav.navbar-nav {
 
 .right-nav-btn {
 	margin-top: 22px;
-	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-		margin-left: -15px;
-	}
+	// @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {	margin-left: -15px;	}
 	.btn {
 		&.ico-msq {
 			background-image: url(../img/msq.png);
@@ -121,10 +117,16 @@ ul.nav.navbar-nav {
 			background-position: 10px 6px;
 			padding-left: 32px;	
 			margin-right: 15px;
+			@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+				margin-right: 5px;
+			}
 		}
 	}
-	.btn-group {
+	.city-select {
 		margin-right: 25px;
+		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+			margin-right: 15px;
+		}
 		&:hover {
 			box-shadow: 0 0 10px rgba(255,255,255,0.5);
 			.btn {
@@ -219,10 +221,13 @@ ul.nav.navbar-nav {
 	background-image: url(../img/Photos/BG_Dark_5.jpg);
 	background-size: cover;
 	padding-top: 46px;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
 	@media (max-width: $screen-xs-max) {
 		padding-top: 26px;
 		padding-bottom: 20px;
+	}
+	p {
+		white-space: nowrap;
 	}
 	.row {
 		@media (min-width: 1650px) {
@@ -232,7 +237,8 @@ ul.nav.navbar-nav {
 		}
 	}
 	.condition {
-		margin-left: 30px;
+		white-space: nowrap;
+		margin-left: 0;
 		margin-right: 20px;
 		font-size: 16px;
 		color: rgba(255,255,255, 0.4);
@@ -246,6 +252,8 @@ ul.nav.navbar-nav {
 		font-weight: 300;
 		font-size: 16px;
 		color: rgba(255,255,255, 0.4);
+		top: -5px;
+		position: relative;
 		&:before {
 			content: ' ';
 			border-top: 1px solid #A7B2B9;
@@ -407,5 +415,97 @@ a.descr {
 	}
 	&.noactive {
 		opacity: 0.4;
+	}
+}
+
+.right-soc {
+	margin-bottom: 0;
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		margin-right: 30px;
+	}
+}
+
+.ico-pay {
+	display: inline-block;
+	width: 47px;
+	height: 32px;
+	background-color: #516677;
+	border-radius: 2px;
+	margin-left: 27px;
+	background-image: url(../img/cash.png);
+	background-repeat: no-repeat;
+	&.ico-visa {
+		background-position: top left;
+	}
+	&.ico-mc {
+		background-position: -47px 0px;
+	}
+	&.ico-cash {
+		background-position: -94px 0px;
+	}
+}
+
+.weinsoc {
+	font-size: 12px;
+	color: rgba(193,235,255, 0.4);
+	text-transform: uppercase;
+	line-height: 36px;
+	height: 36px;
+	display: inline-block;
+	top: -12px;
+	position: relative;
+	em {
+		padding: 0 10px 0 9px;
+	}
+}
+
+#myModalMenu {
+	.close {
+		float: none;
+		color:#fff;
+		opacity: 1;
+		span {
+			color:#fff;
+			font-weight: normal;
+			font-size: 38px;
+		}
+	}
+	.navbar-collapse {
+		border-top: none;
+		box-shadow: none;
+	}
+	.modal-header {
+		border-bottom: none;
+		padding-bottom: 5px;
+	}
+	.modal-body {
+		padding-top: 0;
+	}
+	.modal-content {
+		background-color: transparent;
+	}
+}
+
+#for-login-pl, #for-city {
+	display: inline-block;
+}
+
+@media (max-width: $screen-xs-max) {
+	.right-nav-btn {
+		.city-select, .ico-lock {
+			display: none;
+		}
+		.city-select {
+			float: right;
+			margin: 0 8px 0 0;
+		}
+		.ico-lock {
+			width: 127px;
+			margin: 0 0 0 8px;
+		}
+	}
+	#myModalMenu .modal-body {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }

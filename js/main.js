@@ -34,21 +34,33 @@ $(function() {
 	});
 
 
-	$('#top_menu').on('show.bs.collapse', function(){
-		$('body').append('<div class="modal-backdrop fade in"></div>');
-		$(this).css({
-			'position': 'absolute',
-			'width': document.body.clientWidth,
-			'height': $(window).height(),
-			'overflow-y':'scroll',
-			'z-index': 1041,
-			'top': 0,
-			'left': 0,
-		}).appendTo('body');
-	});
+	$('#show-menu').click(function() {
 
-	$('#close_top_menu').click(function(){
-		$('#top_menu').appendTo('#top_menu_container');
-		$('.modal-backdrop.fade.in').fadeOut();
+		if (document.body.clientWidth < 768) {
+			if ($('#for-select-city').text() == '') {
+				$('.city-select').show().appendTo('#for-select-city');
+				$('#for-city').html('');
+			}
+
+			if ($('#for-login').text() == '') {
+				$('.ico-lock').show().css('display','inline-block').appendTo('#for-login');
+				$('#for-login-pl').html('');
+			}
+		} else {
+			if ($('#for-login-pl').text() == '') {
+				$('.ico-lock').hide().appendTo('#for-login-pl');
+				$('#for-login').html('')
+			}
+			if ($('#for-city').text() == '') {
+				$('.city-select').hide().appendTo('#for-city');
+				$('#for-select-city').html('');
+			}
+		}
+
+		if ($('#myModalMenu #for-menu').text() == '') {
+			$('#top_menu').show().appendTo('#myModalMenu #for-menu');
+		}
+
+		$('#myModalMenu').modal('toggle');
 	});
 });

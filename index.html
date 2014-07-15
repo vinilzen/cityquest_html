@@ -42,10 +42,10 @@
                   <a class="navbar-brand" href="#"><img src="img/logo.png" /></a>
                 </div>
               </div>
-              <div class="col-md-6 col-sm-1 hidden-xs"  id="top_menu_container">
+              <div class="col-md-6 col-sm-1 hidden-xs" id="top_menu_container">
                 <div class="navbar-collapse collapse" id="top_menu">
                   <ul class="nav navbar-nav">
-                    <li class="hidden-lg">
+                    <li class="hidden hidden-lg">
                       <a type="button" class="" id="close_top_menu">
                         <span aria-hidden="true">×</span><span class="sr-only">Close</span>
                       </a>
@@ -60,7 +60,7 @@
               </div>
               <div class="col-md-3 col-sm-7 col-xs-5">
                 <div class="pull-right right-nav-btn">
-                  <button type="button" class="btn navbar-toggle btn-topline" data-toggle="collapse" data-target=".navbar-collapse">
+                  <button type="button" id="show-menu" class="btn navbar-toggle btn-topline">
                     <span class="icos">
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
@@ -68,19 +68,26 @@
                     </span>
                     <span class="">Меню</span>
                   </button>
-                  <div class="btn-group city-select hidden-xs">
-                    <button type="button" class="btn btn-topline ico-msq">Москва</button>
-                    <button type="button" class="btn btn-topline dropdown-toggle" data-toggle="dropdown">
-                      <span class="caret"></span>
-                      <span class="sr-only">Выбрать город</span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#">Питер</a></li>
-                      <li><a href="#">Уфа</a></li>
-                      <li><a href="#">Владивосток </a></li>
-                    </ul>
+
+                  <div id="for-city">
+                    <div class="btn-group city-select">
+                      <button type="button" class="btn btn-topline ico-msq">Москва</button>
+                      <button type="button" class="btn btn-topline dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only">Выбрать город</span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Питер</a></li>
+                        <li><a href="#">Уфа</a></li>
+                        <li><a href="#">Владивосток </a></li>
+                      </ul>
+                    </div>
                   </div>
-                  <a href="#login" class="btn btn-topline hidden-xs btn-default ico-lock">ВОЙТИ</a>
+
+                  <div id="for-login-pl">
+                    <a href="#login" class="btn btn-topline btn-default ico-lock">ВОЙТИ</a>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -182,9 +189,12 @@
     <!-- FOOTER -->
     <div class="footer">
       <div class="row">
-        <div class="col-sm-4 hidden-xs">
+        <div class="col-sm-5 hidden-xs">
           <p class="pull-left condition">
-            Для участия нужно собрать команду от 2 до 4 человек и записаться на игру
+            <i class="ico-pay ico-visa"></i>
+            <i class="ico-pay ico-mc"></i>
+            <i class="ico-pay ico-cash"></i>
+            <span class="weinsoc hidden-sm"><em>&mdash;</em> Принимаем к оплате</span>
           </p>
         </div>
         <div class="col-xs-12 visible-xs">
@@ -194,13 +204,14 @@
             <a href="#" class="btn-soc"><i class="ico-soc ico-vk"></i></a>
           </p>
         </div>
-        <div class="col-sm-4 col-xs-12">
+        <div class="col-sm-2 col-xs-12">
           <p class="text-center">
             <span class="brand"><strong>CITY</strong> QUEST 2014</span>
           </p>
         </div>
-        <div class="col-sm-4 col-xs-12 hidden-xs">
-          <p class="pull-right">
+        <div class="col-sm-5 col-xs-12 hidden-xs">
+          <p class="pull-right right-soc">
+            <span class="weinsoc hidden-sm">мы в социальных сетях <em>&mdash;</em></span>
             <a href="#" class="btn-soc"><i class="ico-soc ico-fb"></i></a>
             <a href="#" class="btn-soc"><i class="ico-soc ico-tw"></i></a>
             <a href="#" class="btn-soc"><i class="ico-soc ico-vk"></i></a>
@@ -208,6 +219,26 @@
         </div>
       </div>
     </div>
+
+<div class="modal fade" id="myModalMenu" tabindex="-1" role="dialog" aria-labelledby="myModalMenuLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="row right-nav-btn">
+          <div class="col-xs-6" id="for-select-city"></div>
+          <div class="col-xs-6" id="for-login"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12" id="for-menu"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
