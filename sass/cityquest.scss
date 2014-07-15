@@ -187,7 +187,6 @@ ul.nav.navbar-nav {
 	p {
 		color: rgba(255,255,255, 0.7);
 		font-size: 28px;
-		font-family: "Circe", "Helvetica Neue", Helvetica, sans-serif;
 		font-weight: 300;
 		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 			font-size: 24px;
@@ -208,7 +207,6 @@ ul.nav.navbar-nav {
 	}
 	small {
 		font-size: 16px;
-		font-family: "Circe", "Helvetica Neue", Helvetica, sans-serif;
 		font-weight: 300;
 		color: rgba(255,255,255, 0.4);
 		@media (max-width: $screen-xs-max) {

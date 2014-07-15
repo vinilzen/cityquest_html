@@ -283,50 +283,47 @@ address {
   line-height: $line-height-base;
 }
 
-
-// Import the fonts
-/* 
 @font-face {
-  $icon-font-name: 'circe';
-  font-family: 'Circe';
-  src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot'), '#{$icon-font-path}#{$icon-font-name}.eot'));
-  src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot?#iefix'), '#{$icon-font-path}#{$icon-font-name}.eot?#iefix')) format('embedded-opentype'),
-       // url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.woff'), '#{$icon-font-path}#{$icon-font-name}.woff')) format('woff'),
-       url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.otf'), '#{$icon-font-path}#{$icon-font-name}.otf')) format('opentype'),
-       url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}'), '#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}')) format('svg');
+  font-family: 'Proxima Nova';
+  src: url('fonts/ProximaNova-Regular.woff') format('woff')
+       url('fonts/ProximaNova-Regular.eot?') format('eot'), 
+       url('fonts/ProximaNova-Regular.ttf')  format('truetype'),
+       url('fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
 }
- */
 
-@font-face {
-  font-family: 'Circe-Regular';
-  src: url('fonts/Circe-Regular.eot?') format('eot'), 
-       url('fonts/Circe-Regular.otf')  format('opentype'),
-       url('fonts/Circe-Regular.woff') format('woff'), 
-       url('fonts/Circe-Regular.ttf')  format('truetype'),
-       url('fonts/Circe-Regular.svg#Circe-Regular') format('svg');
-}
+
 
 // Import the fonts
 @font-face {
-  $icon-font-name: 'circelight';
-  font-family: 'Circe';
+  font-family: 'Proxima Nova';
   font-weight: 300;
-  src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot'), '#{$icon-font-path}#{$icon-font-name}.eot'));
-  src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot?#iefix'), '#{$icon-font-path}#{$icon-font-name}.eot?#iefix')) format('embedded-opentype'),
-       // url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.woff'), '#{$icon-font-path}#{$icon-font-name}.woff')) format('woff'),
-       url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.otf'), '#{$icon-font-path}#{$icon-font-name}.otf')) format('opentype'),
-       url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}'), '#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}')) format('svg');
+    src: url('fonts/proximanovalight.eot');
+    src: url('fonts/proximanovalight.eot') format('embedded-opentype'),
+         url('fonts/proximanovalight.woff') format('woff'),
+         url('fonts/proximanovalight.ttf') format('truetype'),
+         url('fonts/proximanovalight.svg#ProximaNovaLight') format('svg');
 }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: bold;
+    src: url('fonts/proximanovabold.eot');
+    src: url('fonts/proximanovabold.eot') format('embedded-opentype'),
+         url('fonts/proximanovabold.woff') format('woff'),
+         url('fonts/proximanovabold.ttf') format('truetype'),
+         url('fonts/proximanovabold.svg#ProximaNovaBold') format('svg');
+}
+
+
+
 // Import the fonts
 @font-face {
-  $icon-font-name: 'bebasneueregular';
   font-family: 'Bebas Neue';
   font-weight: normal;
-  src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot'), '#{$icon-font-path}#{$icon-font-name}.eot'));
-  src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot?#iefix'), '#{$icon-font-path}#{$icon-font-name}.eot?#iefix')) format('embedded-opentype'),
-       // url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.woff'), '#{$icon-font-path}#{$icon-font-name}.woff')) format('woff'),
-       url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.otf'), '#{$icon-font-path}#{$icon-font-name}.otf')) format('opentype'),
-       url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}'), '#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}')) format('svg');
+  src: url('fonts/bebasneueregular.eot') format('eot'), 
+       url('fonts/bebasneueregular.woff') format('woff'), 
+       url('fonts/bebasneueregular.ttf') format('truetype'), 
+       url('fonts/bebasneueregular.svg#bebasneueregular') format('svg');
 }
 
 
