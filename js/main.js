@@ -1,27 +1,31 @@
 $(function() {
-	function set_video_bgr(){
-		if (document.body.clientWidth < 1025) {
-			$('#bgr_video').hide();
-		} else {
-			var w = $('.jumbotron').outerWidth(),
-				video = document.getElementById('bgr_video');
 
-			video.addEventListener('loadeddata', function() {
-				$('.jumbotron').css('backgroud','none');
-				$('#bgr_video')
-					.css({
-						width: w,
-						height: 'auto',
-						display: 'block',
-					});
-			}, false);
+	if ($('#bgr_video').length){
+		
+		function set_video_bgr(){
+			if (document.body.clientWidth < 1025) {
+				$('#bgr_video').hide();
+			} else {
+				var w = $('.jumbotron').outerWidth(),
+					video = document.getElementById('bgr_video');
 
-			video.src = 'img/Background_For_Quest.mp4';
-			video.load();
+				video.addEventListener('loadeddata', function() {
+					$('.jumbotron').css('backgroud','none');
+					$('#bgr_video')
+						.css({
+							width: w,
+							height: 'auto',
+							display: 'block',
+						});
+				}, false);
+
+				video.src = 'img/Background_For_Quest.mp4';
+				video.load();
+			}
 		}
-	}
 
-	set_video_bgr();
+		set_video_bgr();
+	}
 
 	var supportsOrientationChange = "onorientationchange" in window,
 		orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";

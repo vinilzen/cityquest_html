@@ -1,0 +1,81 @@
+doctype html
+html lang="en"
+  head
+    title CityQuest
+    == Slim::Template.new("head.slim").render
+  body
+
+    video#bgr_video autoplay="1" loop="1" src=""
+
+    == Slim::Template.new("top-menu.slim").render
+
+    .jumbotron
+      .container.text-center
+        .row
+          .col-md-10.col-md-offset-1.col-sm-12
+            h1 «Выберись из комнаты» в реальной жизни
+            p
+              | Здесь все как в компьютерной игре, только по-настоящему:
+              br
+                | можно трогать и брать в руки предметы обстановки,
+                br открывать шкафы и двери.
+            small Для участия нужно собрать команду от 2 до 4 человек и записаться на игру
+    #quests.container-fluid
+      .row
+        .col-xs-12.col-md-6.col-sm-12.col-lg-6.col-xlg-4.item
+          img.featurette-image.img-responsive alt=("Generic placeholder image") src="img/Photos/Lab.jpg" 
+            a.descr href="#lab" 
+              h2 Лаборатория
+              p
+                span
+                  i.ico-ppl
+                  i.ico-ppl
+                  i.ico-ppl.noactive
+                  i.ico-ppl.noactive
+                  | 2 - 4 игрока
+                span
+                  i.ico-loc
+                  | ул. Стасовой, д. 10, корп. 3
+        .col-xs-12.col-md-6.col-sm-12.col-lg-6.col-xlg-4.item
+          img.featurette-image.img-responsive alt=("Generic placeholder image") src="img/Photos/Bank.jpg" 
+            a.descr href="#lab" 
+              h2 Ограбление банка
+              p
+                span
+                  i.ico-ppl
+                  i.ico-ppl
+                  i.ico-ppl.noactive
+                  i.ico-ppl.noactive
+                  | 2 - 4 игрока
+                span
+                  i.ico-loc
+                  | ул. Стасовой, д. 10, корп. 3
+        .col-xs-12.col-md-6.col-sm-12.col-lg-6.col-xlg-4.item
+          img.featurette-image.img-responsive alt=("Generic placeholder image") src="img/Photos/Theatre.jpg" 
+            a.descr href="#lab" 
+              h2 Ограбление банка
+              p
+                span
+                  i.ico-ppl
+                  i.ico-ppl
+                  i.ico-ppl.noactive
+                  i.ico-ppl.noactive
+                  | 2 - 4 игрока
+                span
+                  i.ico-loc
+                  | ул. Стасовой, д. 10, корп. 3
+        .col-xs-12.col-md-6.col-sm-12.col-lg-6.col-xlg-4.item
+          img.featurette-image.img-responsive alt=("Generic placeholder image") src="img/Photos/Ghosts.jpg" 
+            a.descr.inactive href="#lab" 
+              h2 Чердак с привидениями
+              p
+                span.glyphicon.glyphicon-time
+              p Квест в разработке
+              p Выход запланирован на середину июня 2014
+        .col-xs-12.col-md-6.col-sm-12.col-lg-6.col-xlg-4.item
+          img.featurette-image.img-responsive alt=("Generic placeholder image") src="img/Photos/Space.jpg" 
+        .col-xs-12.col-md-6.col-sm-12.col-lg-6.col-xlg-4.item
+          img.featurette-image.img-responsive alt=("Generic placeholder image") src="img/Photos/Rudnik.jpg" 
+
+
+    == Slim::Template.new("footer.slim").render

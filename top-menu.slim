@@ -1,0 +1,49 @@
+.navbar-wrapper
+  .container-fluid
+    .navbar.navbar-static-top role="navigation" 
+      .container
+        .row
+          .col-md-3.col-sm-4.col-xs-7
+            .navbar-header
+              a.navbar-brand href="#" 
+                img src="img/logo1.png" /
+          #top_menu_container.col-md-6.col-sm-1.hidden-xs.navbar-inner
+            #top_menu.navbar-collapse.collapse
+              ul.nav.navbar-nav
+                li.hidden.hidden-lg
+                  a#close_top_menu type="button" 
+                    span aria-hidden="true"  ×
+                    span.sr-only Close
+                li.active
+                  a href="#"  Квесты
+                li
+                  a href="rules.html"  Правила
+                li
+                  a href="#2"  Расписание
+                li
+                  a href="#3"  Франшиза
+                li
+                  a href="#4"  Контакты
+          .col-md-3.col-sm-7.col-xs-5
+            .pull-right.right-nav-btn
+              button#show-menu.btn.navbar-toggle.btn-topline type="button" 
+                span.icos
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+                span Меню
+              #for-city
+                .btn-group.city-select
+                  button.btn.btn-topline.ico-msq data-toggle="dropdown" type="button"  Москва
+                  button.btn.btn-topline.dropdown-toggle data-toggle="dropdown" type="button" 
+                    span.caret
+                    span.sr-only Выбрать город
+                  ul.dropdown-menu role="menu" 
+                    li
+                      a href="#"  Питер
+                    li
+                      a href="#"  Уфа
+                    li
+                      a href="#"  Владивосток
+              #for-login-pl
+                a.btn.btn-topline.btn-default.ico-lock href="#login"  ВОЙТИ
