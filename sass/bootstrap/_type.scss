@@ -314,6 +314,17 @@ address {
          url('fonts/proximanovabold.svg#ProximaNovaBold') format('svg');
 }
 
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 500;
+    src: url('fonts/proximanovasemibold.eot');
+    src: url('fonts/proximanovasemibold.eot') format('embedded-opentype'),
+         url('fonts/proximanovasemibold.woff') format('woff'),
+         url('fonts/proximanovasemibold.ttf') format('truetype'),
+         url('fonts/proximanovasemibold.svg#ProximaNovaSemibold') format('svg');
+}
+
+
 
 
 // Import the fonts

@@ -1,8 +1,14 @@
-.navbar-wrapper .container-fluid {
-	@media (min-width: 1650px) {
-		width: 1650px;
-		margin-left: auto;
-		margin-right: auto;
+
+.navbar-wrapper {
+
+	box-shadow: inset 0 100px 100px -50px rgba(0, 0, 0, 0.3);
+	//@media (max-width: $screen-sm-max) { box-shadow: inset 0 60px 60px -30px rgba(0, 0, 0, 0.3); }
+	.container-fluid {
+		@media (min-width: 1650px) {
+			width: 1650px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }
 
@@ -43,7 +49,7 @@ ul.nav.navbar-nav {
 			text-transform: uppercase;
 			color:#fff;
 			opacity:0.4;
-			padding-top: 27px;
+			padding-top: 25px;
 			padding-left: 0;
 			padding-right: 0;
 			&:hover {
@@ -69,7 +75,7 @@ ul.nav.navbar-nav {
 	background-color: transparent;
 	text-transform: uppercase;
 	color: rgba(255,255,255, 0.7);
-	border: 1px solid #76838c;
+	border: 1px solid #5c6368;
 	font-weight: 300;
 	font-size: 13px;
 	padding: 8px 12px 5px;
@@ -116,7 +122,7 @@ ul.nav.navbar-nav {
 			background-repeat: no-repeat;
 			background-position: 10px 6px;
 			padding-left: 32px;	
-			margin-right: 15px;
+			margin-right: 17px;
 			@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 				margin-right: 5px;
 			}
@@ -156,6 +162,10 @@ ul.nav.navbar-nav {
 	top:0;
 	background-image: url(../img/Photos/BG_Dark_5.jpg);
 	background-size: cover;
+}
+
+#quests {
+	box-shadow: 0 -15px 50px 10px rgba(0, 0, 0, 0.3);
 }
 
 .jumbotron {
@@ -207,7 +217,7 @@ ul.nav.navbar-nav {
 	}
 	small {
 		font-size: 16px;
-		font-weight: 300;
+		// font-weight: 300;
 		color: rgba(255,255,255, 0.4);
 		@media (max-width: $screen-xs-max) {
 			font-size: 15px;
@@ -218,6 +228,7 @@ ul.nav.navbar-nav {
 .footer {
 	background-image: url(../img/Photos/BG_Dark_5.jpg);
 	background-size: cover;
+	box-shadow: inset 0 30px 50px rgba(0, 0, 0, 0.5);
 	padding-top: 46px;
 	padding-bottom: 30px;
 	@media (max-width: $screen-xs-max) {
@@ -314,13 +325,12 @@ a.descr {
 		margin-top: 15%;
 		font-size: 32px;
 		color:#fff;
-		font-weight: bold;
 		width: 100%;
 		text-align: center;
 		text-transform: uppercase;
 		text-decoration: none;
 		@media (max-width: $screen-xs-max) {
-			font-size: 24px;
+			font-size: 21px;
 			margin-top: 10%;
 		}
 		&:after {
@@ -360,8 +370,13 @@ a.descr {
 			text-align: center;
 			padding-left: 50px;
 			padding-right: 50px;
-			margin-top: 5px;
-			margin-bottom: 10px;
+			margin:3% 0;
+
+			@media (max-width: $screen-xs-max) {
+				font-size: 14px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
 			span {
 				margin: 15px 0;
 				font-size: 26px;
