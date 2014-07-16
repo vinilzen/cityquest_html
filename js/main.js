@@ -29,8 +29,28 @@ $(function() {
 	window.addEventListener(orientationEvent, function() {
 		set_video_bgr();
 
+
 		$('#top_menu').appendTo('#top_menu_container');
 		$('.modal-backdrop.fade.in').fadeOut();
+		if (document.body.clientWidth < 1024) {
+			$('#top_menu').hide();
+		}
+
+		if (document.body.clientWidth > 767) {
+
+			if ($('#for-login-pl').text() == '') {
+				$('.ico-lock').appendTo('#for-login-pl').show();
+				$('#for-login').html('');
+			}
+			if ($('#for-city').text() == '') {
+				$('.city-select').appendTo('#for-city').css('display','inline-block');
+				$('#for-select-city').html('');
+			}
+		} else {
+			$('.city-select, .ico-lock').hide();
+		}
+		
+		$('#myModalMenu').modal('hide');
 	});
 
 
