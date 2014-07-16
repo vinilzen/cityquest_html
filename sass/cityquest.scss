@@ -30,9 +30,22 @@
 	}
 }
 
+.navbar .nav,
+.navbar .nav > li {
+  float:none;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  *zoom:1; /* hasLayout ie7 trigger */
+  vertical-align: top;
+}
+
+.navbar-inner {
+  text-align:center;
+}
 
 ul.nav.navbar-nav {
 	li {
+		transition: all .5s;
 		margin:0 19px;
 		@media (min-width: $screen-md) {
 			border-top: 5px solid rgba(0,0,0,0);
@@ -48,6 +61,7 @@ ul.nav.navbar-nav {
 			font-weight: normal;
 			text-transform: uppercase;
 			color:#fff;
+			transition: all .5s;
 			opacity:0.4;
 			padding-top: 25px;
 			padding-left: 0;
@@ -86,7 +100,6 @@ ul.nav.navbar-nav {
 		box-shadow: 0 0 10px rgba(255,255,255,0.5);
 	}
 }
-
 .btn.navbar-toggle {
 	float: none;
 	margin-right: 25px;
@@ -111,6 +124,7 @@ ul.nav.navbar-nav {
 	margin-top: 22px;
 	// @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {	margin-left: -15px;	}
 	.btn {
+		transition: all .5s;
 		&.ico-msq {
 			background-image: url(../img/msq.png);
 			background-repeat: no-repeat;
@@ -130,6 +144,7 @@ ul.nav.navbar-nav {
 	}
 	.city-select {
 		margin-right: 25px;
+		transition: all .5s;
 		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 			margin-right: 15px;
 		}
@@ -281,6 +296,8 @@ ul.nav.navbar-nav {
 	border-radius: 50%;
 	background-color: rgba(193, 235, 255, 0.4);
 	margin-right: 16px;
+
+	transition: all .2s;
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.8);
 		box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -311,6 +328,13 @@ ul.nav.navbar-nav {
 }
 .item {
 	position: relative;
+	overflow: hidden;
+	img {
+		transition: all 3s ease-out;
+	}
+	&:hover img {
+		-webkit-transform: scale(1.1);
+	}
 }
 a.descr {
 	background-color: rgba(0,0,0,0.4);
