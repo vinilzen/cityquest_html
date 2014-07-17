@@ -31,7 +31,10 @@ $(function() {
 		orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
 
 	window.addEventListener(orientationEvent, function() {
-		set_video_bgr();
+
+		if ($('#bgr_video').length){
+			set_video_bgr();
+		}
 
 
 		$('#top_menu').appendTo('#top_menu_container');

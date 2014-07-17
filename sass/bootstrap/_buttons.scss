@@ -57,6 +57,31 @@
 .btn-default {
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
 }
+.btn-q {
+  @include button-variant($btn-default-color, rgba(0,0,0,0), #35434e);
+  font-weight: 300;
+  border-radius: 0;
+  font-size: 15px;
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  padding: 0;
+  margin-right: 5px;
+  &:hover {
+    color:rgba(0,0,0,.7);
+    background-color: #fff;
+  }
+  &.disabled {
+    color: rgba(255,255,255,0.2);
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid rgba(15, 30, 40, 0.69);
+  }
+}
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }

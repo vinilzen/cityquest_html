@@ -1,0 +1,92 @@
+doctype html
+html lang="en"
+  head
+    title CityQuest
+    == Slim::Template.new("head.slim").render
+  body.inner
+    == Slim::Template.new("top-menu.slim").render
+
+    .jumbotron
+
+    .container
+      .row.rules.schedules
+        .col-xs-10.col-xs-offset-1.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+          h3.text-center Здесь вы можете наблюдать полное расписание по всем квестам на ближайшие две недели
+
+    .container-fluid
+      .row
+        .col-xs-12
+          table.quests_schedules.table.table-hover
+            tr
+              td colspan="2"
+                table.table.date_schedules
+                  tr
+                    td
+                      a.move.move-left
+                        i.glyphicon.glyphicon-chevron-left
+                    td
+                      .curent_date.active
+                        span 
+                          em 30
+                          | .06
+                        small Понедельник
+                      .curent_date
+                        span 
+                          em 1
+                          | .07
+                        small Вторник
+                      .curent_date
+                        span 
+                          em 2
+                          | .07
+                        small Среда
+                      .curent_date
+                        span 
+                          em 3
+                          | .07
+                        small Четверг
+                      .curent_date
+                        span 
+                          em 4
+                          | .07
+                        small Пятница
+                      .curent_date.weekend
+                        span 
+                          em 5
+                          | .07
+                        small Суббота
+                      .curent_date.weekend
+                        span
+                          em 6
+                          | .07
+                        small Воскресение
+                      .curent_date
+                        span 
+                          em 7
+                          | .07
+                        small Понедельник
+
+                    td
+                      a.move.move-right
+                        i.glyphicon.glyphicon-chevron-right
+                hr.gradient
+            - 3.times do
+              tr
+                td
+                  .quest_preview
+                    img src="img/Photos/Lab_Low.jpg"
+                    h5 Лаборатория
+                td.times
+                  .times-line
+                    - 3.times do
+                      .btn.btn-q 00:00
+                      .btn.btn-q 01:15
+                      .btn.btn-q 02:45
+                      .btn.btn-q.invisible 04:00
+                      .btn.btn-q.invisible 06:30
+                      .btn.btn-q.disabled 07:00
+
+                    .btn.btn-q 10:00
+
+
+    == Slim::Template.new("footer.slim").render
