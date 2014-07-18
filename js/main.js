@@ -1,5 +1,8 @@
 $(function() {
 
+
+	$('.ico-pay').tooltip();
+
 	if ($('#bgr_video').length){
 		
 		function set_video_bgr(){
@@ -19,7 +22,7 @@ $(function() {
 						});
 				}, false);
 
-				video.src = 'img/Background_For_Quest.mp4';
+				video.src = 'img/Quest_BG_V_3.mp4';
 				video.load();
 			}
 		}
@@ -37,24 +40,24 @@ $(function() {
 		}
 
 
-		$('#top_menu').appendTo('#top_menu_container');
-		$('.modal-backdrop.fade.in').fadeOut();
+		// $('.modal-backdrop.fade.in').fadeOut();
 		if (document.body.clientWidth < 1024) {
+			$('#top_menu').appendTo('#top_menu_container');
 			$('#top_menu').hide();
-		}
 
-		if (document.body.clientWidth > 767) {
+			if (document.body.clientWidth > 767) {
 
-			if ($('#for-login-pl').text() == '') {
-				$('.ico-lock').appendTo('#for-login-pl').show();
-				$('#for-login').html('');
+				if ($('#for-login-pl').text() == '') {
+					$('.ico-lock').appendTo('#for-login-pl').show();
+					$('#for-login').html('');
+				}
+				if ($('#for-city').text() == '') {
+					$('.city-select').appendTo('#for-city').css('display','inline-block');
+					$('#for-select-city').html('');
+				}
+			} else {
+				$('.city-select, .ico-lock').hide();
 			}
-			if ($('#for-city').text() == '') {
-				$('.city-select').appendTo('#for-city').css('display','inline-block');
-				$('#for-select-city').html('');
-			}
-		} else {
-			$('.city-select, .ico-lock').hide();
 		}
 		
 		$('#myModalMenu').modal('hide');
@@ -90,4 +93,11 @@ $(function() {
 
 		$('#myModalMenu').modal('toggle');
 	});
+
+
+	$('.curent_date').click(function(){
+		$('.curent_date').removeClass('active');
+		$(this).addClass('active');
+	});
+
 });

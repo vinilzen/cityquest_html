@@ -10,83 +10,289 @@ html lang="en"
 
     .container
       .row.rules.schedules
-        .col-xs-10.col-xs-offset-1.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
-          h3.text-center Здесь вы можете наблюдать полное расписание по всем квестам на ближайшие две недели
+        .col-xs-10.col-xs-offset-1.col-xlg-offset-3.col-md-10.col-md-offset-1.col-lg-8.col-xlg-6.col-lg-offset-2.text-center
+          h3 Здесь вы можете наблюдать полное расписание по всем квестам на ближайшие две недели
 
-    .container-fluid
+    .container.container-xlg
       .row
         .col-xs-12
-          table.quests_schedules.table.table-hover
-            tr
-              td colspan="2"
-                table.table.date_schedules
-                  tr
-                    td
-                      a.move.move-left
-                        i.glyphicon.glyphicon-chevron-left
-                    td
-                      .curent_date.active
-                        span 
-                          em 30
-                          | .06
-                        small Понедельник
-                      .curent_date
-                        span 
-                          em 1
-                          | .07
-                        small Вторник
-                      .curent_date
-                        span 
-                          em 2
-                          | .07
-                        small Среда
-                      .curent_date
-                        span 
-                          em 3
-                          | .07
-                        small Четверг
-                      .curent_date
-                        span 
-                          em 4
-                          | .07
-                        small Пятница
-                      .curent_date.weekend
-                        span 
-                          em 5
-                          | .07
-                        small Суббота
-                      .curent_date.weekend
-                        span
-                          em 6
-                          | .07
-                        small Воскресение
-                      .curent_date
-                        span 
-                          em 7
-                          | .07
-                        small Понедельник
+          .row.date_schedules
+            .col-xs-3.col-md-2.col-xlg-1
+              a.move.move-left
+                i.glyphicon.glyphicon-chevron-left
+            .col-xs-6.col-md-8.col-xlg-10
+              .calendar
+                .curent_date.active
+                  span 
+                    em 30.
+                    | 06
+                  small Понедельник
+                .curent_date
+                  span 
+                    em 1.
+                    | 07
+                  small Вторник
+                .curent_date
+                  span 
+                    em 2.
+                    | 07
+                  small Среда
+                .curent_date
+                  span 
+                    em 3.
+                    | 07
+                  small Четверг
+                .curent_date
+                  span 
+                    em 4.
+                    | 07
+                  small Пятница
+                .curent_date.weekend
+                  span 
+                    em 5.
+                    | 07
+                  small Суббота
+                .curent_date.weekend
+                  span
+                    em 6.
+                    | 07
+                  small Воскресение
+                .curent_date
+                  span 
+                    em 7.
+                    | 07
+                  small Понедельник
+            .col-xs-3.col-md-2.col-xlg-1.text-right
+              a.move.move-right
+                i.glyphicon.glyphicon-chevron-right
 
-                    td
-                      a.move.move-right
-                        i.glyphicon.glyphicon-chevron-right
-                hr.gradient
-            - 3.times do
-              tr
-                td
-                  .quest_preview
-                    img src="img/Photos/Lab_Low.jpg"
-                    h5 Лаборатория
-                td.times
-                  .times-line
-                    - 3.times do
-                      .btn.btn-q 00:00
-                      .btn.btn-q 01:15
-                      .btn.btn-q 02:45
-                      .btn.btn-q.invisible 04:00
-                      .btn.btn-q.invisible 06:30
-                      .btn.btn-q.disabled 07:00
+          hr.gradient
 
-                    .btn.btn-q 10:00
+        .col-xs-12.ovs
+          .row.quests_schedules
+            .col-xs-2.col-sm-2
+              .quest_preview
+                img src="img/Photos/Lab_Low.jpg" 
+                  h5 Лаборатория
+            .col-xs-10.col-sm-10.times
+                .times-line
+                  .btn.btn-q
+                    | 00:00
+                  .btn.btn-q
+                    | 01:15
+                  .btn.btn-q
+                    | 02:30
+                  .btn.btn-q.invisible
+                    | 04:00
+                  .btn.btn-q.invisible
+                    | 05:15
+                  .btn.btn-q.invisible
+                    | 06:30
+                  .btn.btn-q.invisible
+                    | 07:45
+                  .btn.btn-q.invisible
+                    | 09:00
+                  .btn.btn-q
+                    | 10:15
+                  .btn.btn-q
+                    | 11:30
+                  .btn.btn-q
+                    | 12:45
+                  .btn.btn-q
+                    | 14:00
+                  .btn.btn-q
+                    | 15:15
+                  .btn.btn-q
+                    | 16:30
+                  .btn.btn-q
+                    | 17:45
+                  .btn.btn-q.disabled
+                    | 19:00
+                  .btn.btn-q.disabled
+                    | 20:15
+                  .btn.btn-q.disabled
+                    | 21:30
+                  .btn.btn-q
+                    | 22:45
+                .price-line
+                  .priceTbl style="width: 166px;"
+                    .priceRow
+                      span.dashed
+                      span.price 3000 руб.
+                      span.dashed
+                  .priceTbl style="margin-left: 274px; width: 605px;"
+                    .priceRow
+                      span.dashed
+                      span.price 3000 руб.
+                      span.dashed
+            .clearfix
+            .col-xs-2.col-sm-2
+              .quest_preview
+                img src="img/Photos/Bank_Low.jpg" 
+                  h5 Ограбление банка
+            .col-xs-10.col-sm-10.times
+              .times-line
+                .btn.btn-q
+                  | 00:00
+                .btn.btn-q
+                  | 01:15
+                .btn.btn-q
+                  | 02:30
+                .btn.btn-q.invisible
+                  | 04:00
+                .btn.btn-q.invisible
+                  | 05:15
+                .btn.btn-q.invisible
+                  | 06:30
+                .btn.btn-q.invisible
+                  | 07:45
+                .btn.btn-q.invisible
+                  | 09:00
+                .btn.btn-q
+                  | 10:15
+                .btn.btn-q
+                  | 11:30
+                .btn.btn-q
+                  | 12:45
+                .btn.btn-q
+                  | 14:00
+                .btn.btn-q
+                  | 15:15
+                .btn.btn-q
+                  | 16:30
+                .btn.btn-q
+                  | 17:45
+                .btn.btn-q
+                  | 19:00
+                .btn.btn-q
+                  | 20:15
+                .btn.btn-q.disabled
+                  | 21:30
+                .btn.btn-q
+                  | 22:45
+              .price-line
+                .priceTbl style="width: 166px;"
+                  .priceRow
+                    span.dashed
+                    span.price 3000 руб.
+                    span.dashed
+                .priceTbl style="margin-left: 274px; width: 605px;"
+                  .priceRow
+                    span.dashed
+                    span.price 3000 руб.
+                    span.dashed
+            .clearfix
+            .col-xs-2.col-sm-2
+              .quest_preview
+                img src="img/Photos/Theatre_Low.jpg" 
+                  h5 театр
+            .col-xs-10.col-sm-10.times
+              .times-line
+                .btn.btn-q
+                  | 00:00
+                .btn.btn-q
+                  | 01:15
+                .btn.btn-q
+                  | 02:30
+                .btn.btn-q
+                  | 04:00
+                .btn.btn-q
+                  | 05:15
+                .btn.btn-q
+                  | 06:30
+                .btn.btn-q
+                  | 07:45
+                .btn.btn-q
+                  | 09:00
+                .btn.btn-q.disabled
+                  | 10:15
+                .btn.btn-q.disabled
+                  | 11:30
+                .btn.btn-q.disabled
+                  | 12:45
+                .btn.btn-q
+                  | 14:00
+                .btn.btn-q
+                  | 15:15
+                .btn.btn-q
+                  | 16:30
+                .btn.btn-q
+                  | 17:45
+                .btn.btn-q
+                  | 19:00
+                .btn.btn-q
+                  | 20:15
+                .btn.btn-q
+                  | 21:30
+                .btn.btn-q
+                  | 22:45
+              .price-line
+                .priceTbl style="width: 440px;"
+                  .priceRow
+                    span.dashed
+                    span.price 3000 руб.
+                    span.dashed
+                .priceTbl style="margin-left: 2px; width: 604px;"
+                  .priceRow
+                    span.dashed
+                    span.price 3000 руб.
+                    span.dashed
+            .clearfix
+            .col-xs-2.col-sm-2
+              .quest_preview
+                img src="img/Photos/Ghosts_Low.jpg" 
+                  h5 Чердак
+            .col-xs-10.col-sm-10.times
+              .times-line
+                .btn.btn-q
+                  | 00:00
+                .btn.btn-q
+                  | 01:15
+                .btn.btn-q
+                  | 02:45
+                .btn.btn-q.invisible
+                  | 04:00
+                .btn.btn-q.invisible
+                  | 06:30
+                .btn.btn-q.invisible
+                  | 07:00
+                .btn.btn-q
+                  | 00:00
+                .btn.btn-q
+                  | 01:15
+                .btn.btn-q
+                  | 02:45
+                .btn.btn-q.invisible
+                  | 04:00
+                .btn.btn-q.invisible
+                  | 06:30
+                .btn.btn-q.disabled
+                  | 07:00
+                .btn.btn-q
+                  | 00:00
+                .btn.btn-q
+                  | 01:15
+                .btn.btn-q
+                  | 02:45
+                .btn.btn-q.invisible
+                  | 04:00
+                .btn.btn-q.invisible
+                  | 06:30
+                .btn.btn-q.disabled
+                  | 07:00
+                .btn.btn-q
+                  | 10:00
+              .price-line
+                .priceTbl style="width: 166px;"
+                  .priceRow
+                    span.dashed
+                    span.price 3000 руб.
+                    span.dashed
+                .priceTbl style="margin-left: 164px; width: 715px;"
+                  .priceRow
+                    span.dashed
+                    span.price 3000 руб.
+                    span.dashed
 
 
     == Slim::Template.new("footer.slim").render

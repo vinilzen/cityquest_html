@@ -23,6 +23,30 @@
   @media (min-width: $screen-xlg-min) {
     width: $container-xlg;
   }
+
+  @media (min-width: 1200px) {
+    &.container-xlg {
+      width: 1170px;
+    }
+  }
+  @media (min-width: 1280px) {
+    &.container-xlg {
+      width: 1250px;
+    }
+  }
+  @media (min-width: 1350px) {
+    &.container-xlg {
+      width: 1320px;
+    }
+  }
+  @media (min-width: 1400px) {
+    &.container-xlg {
+      width: 1370px;
+    }
+  }
+  &.container-xlg {
+    overflow: hidden;
+  }
 }
 
 
