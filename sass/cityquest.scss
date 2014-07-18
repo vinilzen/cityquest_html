@@ -781,7 +781,7 @@ hr.gradient {
 }
 
 .calendar {
-	overflow-x: hidden;
+	margin-left: 0;
 	white-space: nowrap;
 	text-align: center;
 }
@@ -831,6 +831,20 @@ hr.gradient {
 	}
 }
 
+.calendar_container {
+	overflow: hidden;
+}
+
+@media (max-width: 479px) {
+	.date_schedules {
+		.col-xs-2 {
+			width: 25%;
+		}
+		.col-xs-8 {
+			width: 50%;
+		}
+	}
+}
 
 @media (max-width: $screen-xs-max) {
 	.right-nav-btn {

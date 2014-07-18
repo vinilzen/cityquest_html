@@ -17,10 +17,10 @@ html lang="en"
       .row
         .col-xs-12
           .row.date_schedules
-            .col-xs-3.col-md-2.col-xlg-1
+            .col-xs-2.col-sm-3.col-md-2.col-xlg-1
               a.move.move-left
                 i.glyphicon.glyphicon-chevron-left
-            .col-xs-6.col-md-8.col-xlg-10
+            .col-xs-8.col-sm-6.col-md-8.col-xlg-10.calendar_container
               .calendar
                 .curent_date.active
                   span 
@@ -62,7 +62,47 @@ html lang="en"
                     em 7.
                     | 07
                   small Понедельник
-            .col-xs-3.col-md-2.col-xlg-1.text-right
+                .curent_date
+                  span 
+                    em 8.
+                    | 07
+                  small Вторник
+                .curent_date
+                  span 
+                    em 9.
+                    | 07
+                  small Среда
+                .curent_date
+                  span 
+                    em 10.
+                    | 07
+                  small Четверг
+                .curent_date
+                  span 
+                    em 11.
+                    | 07
+                  small Пятница
+                .curent_date.weekend
+                  span 
+                    em 12.
+                    | 07
+                  small Суббота
+                .curent_date.weekend
+                  span 
+                    em 13.
+                    | 07
+                  small Воскресение
+                .curent_date
+                  span
+                    em 14.
+                    | 07
+                  small Понедельник
+                .curent_date
+                  span 
+                    em 15.
+                    | 07
+                  small Вторник
+            .col-xs-2.col-sm-3.col-md-2.col-xlg-1.text-right
               a.move.move-right
                 i.glyphicon.glyphicon-chevron-right
 
@@ -296,3 +336,6 @@ html lang="en"
 
 
     == Slim::Template.new("footer.slim").render
+    /! script src="js/slick.min.js"
+    script src="js/jquery.scrollTo.min.js"
+        
