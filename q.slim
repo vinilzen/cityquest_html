@@ -1,0 +1,162 @@
+doctype html
+html lang="en"
+  head
+    title CityQuest - Ограбление банка
+    == Slim::Template.new("head.slim").render
+  body.inner
+    == Slim::Template.new("top-menu.slim").render
+
+    .jumbotron.quest.quest1
+      .container.text-center
+        .row
+          .col-md-10.col-md-offset-1.col-sm-12
+            h1 Ограбление банка
+            p «Замуровали демоны!» - знакомая всем с детства фраза принимает в этом комнате буквальный характер. Вас ждут мистические темницы подземелья из смутного времени!
+        .row.descr_quest
+          .col-xs-12.col-sm-4.col-md-3.tl
+            p
+              i.duration
+              span
+                em 60
+                | минут
+          .col-xs-12.col-sm-4.col-md-3
+            p
+              i.ico-ppl
+              i.ico-ppl
+              i.ico-ppl.noactive
+              i.ico-ppl.noactive
+              span.people
+                em 2 - 4
+                | игрока
+          .col-xs-12.col-sm-4.col-md-3.tr
+            p
+              i.metro
+              span.metro-title Китай-Город
+          .col-xs-12.col-sm-12.col-md-3
+            p
+              i.ico-loc
+              span Малая Тульская улица д.2/1 к5
+
+    .container
+      .row.rules.schedules
+
+    .container.container-xlg
+      .row
+        .col-xs-12.ovs
+          .row.quests_schedules
+            .col-xs-12.text-center
+              h2.active Расписание
+              h2 Победители
+              hr.fadeOut
+            .col-xs-1.col-sm-1
+              h5 30.06
+            .col-xs-11.times
+                .times-line
+                  .btn.btn-q
+                    | 00:00
+                  .btn.btn-q
+                    | 01:15
+                  .btn.btn-q
+                    | 02:30
+                  .btn.btn-q.invisible
+                    | 04:00
+                  .btn.btn-q.invisible
+                    | 05:15
+                  .btn.btn-q.invisible
+                    | 06:30
+                  .btn.btn-q.invisible
+                    | 07:45
+                  .btn.btn-q.invisible
+                    | 09:00
+                  .btn.btn-q
+                    | 10:15
+                  .btn.btn-q
+                    | 11:30
+                  .btn.btn-q
+                    | 12:45
+                  .btn.btn-q
+                    | 14:00
+                  .btn.btn-q
+                    | 15:15
+                  .btn.btn-q
+                    | 16:30
+                  .btn.btn-q
+                    | 17:45
+                  .btn.btn-q.disabled
+                    | 19:00
+                  .btn.btn-q.disabled
+                    | 20:15
+                  .btn.btn-q.disabled
+                    | 21:30
+                  .btn.btn-q
+                    | 22:45
+                .price-line
+                  .priceTbl style="width: 166px;"
+                    .priceRow
+                      span.dashed
+                      span.price 3000 руб.
+                      span.dashed
+                  .priceTbl style="margin-left: 274px; width: 605px;"
+                    .priceRow
+                      span.dashed
+                      span.price 3000 руб.
+                      span.dashed
+            .clearfix
+            .col-xs-1.col-sm-1
+              h5 1.07
+            .col-xs-11.times
+              .times-line
+                .btn.btn-q
+                  | 00:00
+                .btn.btn-q
+                  | 01:15
+                .btn.btn-q
+                  | 02:30
+                .btn.btn-q.invisible
+                  | 04:00
+                .btn.btn-q.invisible
+                  | 05:15
+                .btn.btn-q.invisible
+                  | 06:30
+                .btn.btn-q.invisible
+                  | 07:45
+                .btn.btn-q.invisible
+                  | 09:00
+                .btn.btn-q
+                  | 10:15
+                .btn.btn-q
+                  | 11:30
+                .btn.btn-q
+                  | 12:45
+                .btn.btn-q
+                  | 14:00
+                .btn.btn-q
+                  | 15:15
+                .btn.btn-q
+                  | 16:30
+                .btn.btn-q
+                  | 17:45
+                .btn.btn-q
+                  | 19:00
+                .btn.btn-q
+                  | 20:15
+                .btn.btn-q.disabled
+                  | 21:30
+                .btn.btn-q
+                  | 22:45
+              .price-line
+                .priceTbl style="width: 166px;"
+                  .priceRow
+                    span.dashed
+                    span.price 3000 руб.
+                    span.dashed
+                .priceTbl style="margin-left: 274px; width: 605px;"
+                  .priceRow
+                    span.dashed
+                    span.price 3000 руб.
+                    span.dashed
+            .clearfix
+
+
+    == Slim::Template.new("footer.slim").render
+        

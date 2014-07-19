@@ -45,8 +45,6 @@ $(function() {
 			set_video_bgr();
 		}
 
-
-		// $('.modal-backdrop.fade.in').fadeOut();
 		if (document.body.clientWidth < 1024) {
 			$('#top_menu').appendTo('#top_menu_container');
 			$('#top_menu').hide();
@@ -107,7 +105,7 @@ $(function() {
 	});
 
 
-	if (window.mobilecheck) {
+	if (window.mobilecheck()) {
 
 		$('.calendar_container').css('overflow', 'auto');
 		
