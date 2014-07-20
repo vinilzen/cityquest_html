@@ -993,20 +993,56 @@ body.inner .jumbotron.quest1 {
 	border: none;
 }
 
-.quests_schedules {
-	h2 {
-		display: inline-block;
-		font-size: 18px;
-		// font-weight: 300;
-		color: rgba(255,255,255,0.3);
-		cursor: pointer;
-		border-bottom: 5px solid rgba(0,0,0,0);
-		padding: 0 0 15px 0;
-		margin: 45px 8px 0;
-		text-transform: uppercase;
-		&.active {
-			color: rgba(255,255,255,0.8);
-			border-bottom: 5px solid rgba(255,255,255,.2);
+h2.twotab {
+	display: inline-block;
+	font-size: 18px;
+	// font-weight: 300;
+	color: rgba(255,255,255,0.3);
+	cursor: pointer;
+	border-bottom: 5px solid rgba(0,0,0,0);
+	padding: 0 0 15px 0;
+	margin: 45px 8px 0;
+	text-transform: uppercase;
+	&.active {
+		color: rgba(255,255,255,0.8);
+		border-bottom: 5px solid rgba(255,255,255,.2);
+	}
+}
+.quests_schedules.quest_schedule {
+	width: 1200px;
+	.curent_date {
+		padding-top: 6px;
+		padding-left: 0;
+		padding-right: 0;
+		small, span {
+			text-align: left;
+		}
+		span {
+			font-size: 40px;
+		}
+	}
+	.col-xs-1 {
+		width: 105px;
+	}
+	.col-xs-12.times {
+		margin-left: -105px;
+	}
+	.times .times-line, .times .price-line {
+		float: right;
+	}
+	.times .price-line {
+		padding-top: 5px;
+	}
+}
+
+.weekend {
+	.priceTbl .priceRow span {
+		&.dashed {
+			opacity:.5;
+			background-image: url(../img/dot_bl.png);
+		}
+		&.price {
+			color: #57a3bb;
 		}
 	}
 }
