@@ -805,6 +805,10 @@ hr.gradient {
 	float: left;
 	margin-top: 5px;
 	padding-right: 5px;
+
+	@media (max-width: $screen-xs-max) {
+		float: right;
+	}
 	.priceRow {
 		display: table-row;
 		span {
@@ -856,6 +860,10 @@ body.inner .jumbotron.quest {
 	//box-shadow: inset 0 -50px 200px 200px rgba(0, 0, 0, 0.5);
 	//box-shadow: inset 0 0px 300px 100px #000, inset 0 0 100px #000;
 	box-shadow: inset 0 0px 300px 100px #000, inset 0 0 0 5000px rgba(0, 0, 0, 0.3);
+
+	@media (max-width: $screen-xs-max) {
+		padding-bottom: 25px;
+	}
 	h1 {
 		font-size: 72px;
 		font-weight: bold;
@@ -864,12 +872,28 @@ body.inner .jumbotron.quest {
 			height: 6px;
 			background-color: #fff;
 		}
+		@media (max-width: $screen-xs-max) {
+			font-size: 32px;
+			&:after {
+				width: 38px;
+				height: 3px;
+				margin-top: 15px;
+				margin-bottom: 20px;
+			}
+		}
 	}
 	p {
 		font-size: 24px;
 		color: rgba(255,255,255,.8);
 		@media (max-width: $screen-sm-max) {
 			font-size: 21px;
+		}
+		@media (max-width: $screen-xs-max) {
+			font-size: 15px;
+			margin-bottom: 20px;
+			&:after {
+				display: none;
+			}
 		}
 	}
 }
@@ -996,7 +1020,6 @@ body.inner .jumbotron.quest1 {
 h2.twotab {
 	display: inline-block;
 	font-size: 18px;
-	// font-weight: 300;
 	color: rgba(255,255,255,0.3);
 	cursor: pointer;
 	border-bottom: 5px solid rgba(0,0,0,0);
@@ -1010,6 +1033,9 @@ h2.twotab {
 }
 .quests_schedules.quest_schedule {
 	width: 1200px;
+	@media (max-width: $screen-xs-max) {
+		width: 900px;
+	}
 	.curent_date {
 		padding-top: 6px;
 		padding-left: 0;
@@ -1019,13 +1045,29 @@ h2.twotab {
 		}
 		span {
 			font-size: 40px;
+			@media (max-width: $screen-xs-max) {
+				font-size: 30px;
+			}
+		}
+		small {
+			@media (max-width: $screen-xs-max) {
+				font-size: 10px;
+			}	
 		}
 	}
 	.col-xs-1 {
-		width: 105px;
+		width: 115px;
+		@media (max-width: $screen-xs-max) {
+			padding-left: 15px;
+			width: 105px;
+		}
 	}
 	.col-xs-12.times {
-		margin-left: -105px;
+		margin-left: -115px;
+		@media (max-width: $screen-xs-max) {
+			margin-left: -105px;
+			padding-right: 10px;
+		}
 	}
 	.times .times-line, .times .price-line {
 		float: right;
