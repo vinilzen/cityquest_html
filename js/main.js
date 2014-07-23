@@ -28,7 +28,7 @@ $(function() {
 						});
 				}, false);
 
-				video.src = 'img/Comp_1_1_1.mp4';
+				video.src = 'img/Comp_1_3_1.mp4';
 				video.load();
 			}
 		}
@@ -143,8 +143,10 @@ $(function() {
 	}
 
 	$('#myModalBook').on('shown.bs.modal', function (e) {
-		var h = $('#myModalBook .img-responsive').height();
-		$('.shad').height(h);
+		if (document.body.clientWidth > 768) {
+			var h = $('#myModalBook .img-responsive').height();
+			$('.shad').height(h);
+		}
 	});
 
 

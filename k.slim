@@ -1,0 +1,39 @@
+doctype html
+html lang="en"
+  head
+    title CityQuest - Ограбление банка
+    == Slim::Template.new("head.slim").render
+  body.inner.contact
+    == Slim::Template.new("top-menu.slim").render
+
+	.jumbotron
+
+    .container.container-xlg
+      .row
+      	.col-xs-12.col-md-5.col-lg-6.col-md-offset-7.col-lg-offset-6.contacts
+      	  h5
+      	  	| По всем интересующим вопросам и бронированию квестов пишите!
+          p 
+            i.ico1
+            a href="call:8 952 377-97-97" 8 952 377-97-97
+          p 
+            i.ico2
+            span
+              | Отдел продаж:&nbsp;
+              a target="_blank" href="mailto:hello@cityquest.ru" hello@cityquest.ru
+              br
+            span
+              | Франшиза:&nbsp;
+              a target="_blank" href="mailto:franchise@cityquest.ru" franchise@cityquest.ru
+              br
+            span
+              | Отдел маркетинга:&nbsp;
+              a target="_blank" href="mailto:magazine@cityquest.ru" magazine@cityquest.ru
+          p 
+            i.ico3
+            | Китай-Город
+          p 
+            i.ico4
+            a href="https://goo.gl/maps/ixx11" target="_blank" ул. Летниковская, дом 6А
+
+    == Slim::Template.new("footer.slim").render
