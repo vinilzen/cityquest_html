@@ -28,7 +28,7 @@ $(function() {
 						});
 				}, false);
 
-				video.src = 'img/Quest_BG_V_3.mp4';
+				video.src = 'img/Comp_1_1_1.mp4';
 				video.load();
 			}
 		}
@@ -142,6 +142,15 @@ $(function() {
 		});		
 	}
 
+	$('#myModalBook').on('shown.bs.modal', function (e) {
+		var h = $('#myModalBook .img-responsive').height();
+		$('.shad').height(h);
+	});
 
+
+	$('#myModalAuth .modal-title').click(function(){
+		$('#myModalAuth .modal-title').removeClass('active');
+		$(this).addClass('active');
+	});
 
 });

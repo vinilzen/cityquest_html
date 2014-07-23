@@ -32,6 +32,7 @@
           i.ico-soc.ico-tw
         a.btn-soc href="#" 
           i.ico-soc.ico-vk
+
 #myModalMenu.modal.fade aria-hidden="true" aria-labelledby="myModalMenuLabel" role="dialog" tabindex="-1" 
   .modal-dialog
     .modal-content
@@ -45,6 +46,101 @@
           #for-login.col-xs-6
         .row
           #for-menu.col-xs-12
+
+#myModalAuth.modal.fade aria-hidden="true" aria-labelledby="myModalLabelAuth" role="dialog" tabindex="-1" 
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.visible-xs type="button" class="close" data-dismiss="modal"
+          span aria-hidden="true" &times;
+          span class="sr-only" Close
+        a.h4.modal-title href="#auth" role="tab" data-toggle="tab" Вход на сайт
+        a.h4.modal-title.active href="#reg" role="tab" data-toggle="tab" Регистрация
+        hr.fadeOut
+      .modal-body
+        .row.social_auth
+          .col-xs-6.text-right
+            a.vk href="#vk"
+          .col-xs-6.text-left
+            a.fb href="#fb"
+          .col-xs-12
+            .orTbl
+              .orRow
+                .orCell.orL
+                .orCell.orC
+                  span или
+                .orCell.orR
+        .tab-content
+          #auth.tab-pane
+            form role="form" 
+              .form-group
+                input.form-control placeholder="Email" type="email"
+              .form-group
+                input.form-control type="password" placeholder="Пароль"
+              .checkbox.invisible
+                label
+              button.btn.btn-default.btn-block.btn-lg type="submit"  Авторизоваться
+          #reg.tab-pane.active
+            form role="form" 
+              .form-group
+                input.form-control placeholder="Имя" type="text"
+              .form-group
+                input.form-control placeholder="Email" type="email"
+              .form-group
+                input.form-control type="password" placeholder="Пароль"
+              .checkbox
+                label
+                  input type="checkbox" 
+                  | Я принимаю 
+                  a href="rules.html" Условия использования
+              button.btn.btn-default.btn-block.btn-lg type="submit"  Зарегистрироваться
+
+
+#myModalBook.modal.fade aria-hidden="true" aria-labelledby="myModalLabelBook" role="dialog" tabindex="-1" 
+  .modal-dialog
+    .modal-content
+      .modal-body
+        .row
+          .col-sm-6.col-xs-12
+            img.featurette-image.img-responsive alt=("Generic placeholder image") src="img/Photos/Lab.jpg" 
+              a.descr href="#lab" 
+                h2 Лаборатория
+                p
+                  span
+                    i.ico-ppl
+                    i.ico-ppl
+                    i.ico-ppl.noactive
+                    i.ico-ppl.noactive
+                    | 2 - 4 игрока
+                  span
+                    i.ico-loc
+                    | ул. Стасовой, д. 10, корп. 3
+          .col-sm-6.col-xs-12.shad
+            button type="button" class="close" data-dismiss="modal"
+              span aria-hidden="true" &times;
+              span class="sr-only" Close
+            .text-center
+              h3 Подтверждение
+              p
+                small Понедельник
+                span 30.07
+                em в
+                span 10:45
+              .priceTbl
+                .priceRow
+                  span.dashed
+                  span.price
+                    | 3000
+                    em руб.
+                  span.dashed
+              p.you_phone
+                | Ваш номер телефона:
+                a +7 952 377-97-97
+              .btn.btn-default Подтвердить бронь
+      
+
+
+
 
 script src="js/jquery.min.js" 
 script src="js/bootstrap.min.js" 
