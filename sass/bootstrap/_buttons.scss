@@ -71,15 +71,21 @@
   text-align: center;
   padding: 0;
   margin-right: 5px;
+  border-color: rgba(255, 255, 255, 0.15);
   -webkit-transition: all .3s;
     transition: all .3s;
   &:hover {
     color:rgba(0,0,0,.7);
     background-color: #fff;
   }
+  &.myDate {
+    border: 2px solid  #b6f8b8;
+    background-color: rgba(182, 248, 184, 0.1);
+    opacity: 1;
+  }
   &.disabled {
-    color: rgba(255,255,255,0.2);
-    border: 2px solid rgba(15, 30, 40, 0.69);
+    color: rgba(255,255,255,0.1);
+    border: 2px solid rgba(0, 0, 0, 0.1);
   }
   @media (max-width: $screen-xs-max) {
     font-size: 10px;
